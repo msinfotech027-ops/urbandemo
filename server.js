@@ -16,4 +16,8 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://msinfotech027_db_user:m
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+app.get("/", (req, res) => {
+  res.send("API WORKING");
+});
+
 app.listen(PORT, () => console.log('Server running on port', PORT));
